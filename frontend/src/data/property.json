@@ -1,0 +1,38 @@
+[
+  {
+    "id":1,
+    "type":"House",
+    "name":"Birla House",
+    "price":12000
+  },
+  {
+    "id":2,
+    "type":"Villa",
+    "name":"Rose willa",
+    "price":120000
+  },
+  {
+    "id":3,
+    "type":"House",
+    "name":"pearl House",
+    "price":13000
+  },
+  {
+    "id":4,
+    "type":"House",
+    "name":"Dirla House",
+    "price":128000
+  },
+  {
+    "id":5,
+    "type":"House",
+    "name":"Sirla House",
+    "price":12000
+  },
+  {
+    "id":6,
+    "type":"House",
+    "name":"Marco Home",
+    "price":12800
+  }
+]
