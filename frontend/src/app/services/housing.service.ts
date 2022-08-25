@@ -11,21 +11,18 @@ export class HousingService {
 
   constructor(private http:HttpClient) { }
 
-  getAllProperties():Observable<any[]>{
-   return this.http.get('data/property.json').pipe(
-     map(
-       data=>{
-          // console.log(data);
-         const propertiesArray:any =data;
-        //  for(const id in data){
-        //    if(data.hasOwnProperty(id)){
-        //     propertiesArray.push(data);
-        //    }
-        //  }
-
-         return propertiesArray;
-       }
-     )
-   )
+  getAllProperties(sellrent:number):Observable<IProperty[]>{
+    return this.http.get<IProperty[]>('data/property.json').pipe(
+      map(
+        data=>{
+          const propertiesArray: Array<IProperty> = [];
+          for(const id in data){
+            if(data.hasOwnProperty(id) &&data[id].sellrent==sellrent){
+              propertiesArray.push(data[id]);
+            }
+          }
+        return propertiesArray;
+        })
+    );
   }
 }

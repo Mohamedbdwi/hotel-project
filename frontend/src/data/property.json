@@ -1,36 +1,47 @@
 [
   {
     "id":1,
+    "sellrent":2,
     "type":"House",
     "name":"Birla House",
-    "price":12000
+    "price":12000,
+    "image":"prop-1"
   },
   {
     "id":2,
+    "sellrent":2,
     "type":"Villa",
     "name":"Rose willa",
-    "price":120000
+    "price":120000,
+    "image":"prop-2"
   },
   {
     "id":3,
+    "sellrent":1,
     "type":"House",
     "name":"pearl House",
-    "price":13000
+    "price":13000,
+    "image":"prop-3"
   },
   {
     "id":4,
+    "sellrent":2,
     "type":"House",
     "name":"Dirla House",
-    "price":128000
+    "price":128000,
+    "image":"prop-4"
   },
   {
     "id":5,
+    "sellrent":1,
     "type":"House",
     "name":"Sirla House",
-    "price":12000
+    "price":12000,
+    "image":"prop-5"
   },
   {
     "id":6,
+    "sellrent":2,
     "type":"House",
     "name":"Marco Home",
     "price":12800

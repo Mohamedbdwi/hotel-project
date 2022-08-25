@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { HousingService } from 'src/app/services/housing.service';
 import { IProperty } from '../IProperty.interface';
 
@@ -8,34 +9,26 @@ import { IProperty } from '../IProperty.interface';
   styleUrls: ['./property-list.component.css']
 })
 export class PropertyListComponent implements OnInit {
-  properties: Array<IProperty> = [];
+  properties: IProperty[] = [];
 
 
-  constructor(private housingService: HousingService) { }
+  constructor(private route:ActivatedRoute,
+              private housingService: HousingService) { }
+sellrent = 1;
 
   ngOnInit(): void {
-    this.housingService.getAllProperties().subscribe({
+    if(this.route.snapshot.url.toString()){
+      this.sellrent =2;
+    }
+    this.housingService.getAllProperties(this.sellrent).subscribe({
       next: (data) => {
            this.properties = data;
            console.log(data);
+
                       },
       error: (e) => console.error(e)
-  }
-      //This is deprecated now:
-      // data=>{
-      //   this.properties = data;
-      //   console.log(data);
-      //       },
-      // error=>{
-      //   console.log(error)
-      //       }
-    );
-    //This is before using services:
-    // this.http.get('data/property.json').subscribe(data=>{
-    //   this.properties = data;
-    //   console.log(data)
-    // }
-    // );
+  })
+
   }
 
 }
